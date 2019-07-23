@@ -1,0 +1,60 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+  .controls
+    .buttons
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr auto
+      grid-gap: 15px
+    .sort
+      justify-content: flex-end
+    .generate
+      justify-content: flex-end
+
+// ≥768px
++media-breakpoint-down(sm)
+  body
+    margin: 50px 10px 10px 10px
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr auto 1fr
+  .controls
+    grid-row: 2 / 3
+    justify-content: center
+    .buttons
+      height: auto
+      grid-template-columns: auto 1fr
+      grid-template-rows: 1fr
+      grid-gap: 15px
+    .sort
+      justify-content: flex-start
+      align-items: flex-start
+    .generate
+      justify-content: flex-start
+      align-items: flex-start
+  .content
+    justify-content: center
+  .instruction
+    grid-row: 3 / -1
+
+// ≥576px
++media-breakpoint-down(xs)
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

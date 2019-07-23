@@ -1,0 +1,68 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+body
+  background-color: $color1
+  margin: 100px 10px 10px 10px
+  font-family: $default-font
+  display: grid
+  grid-template-columns: auto auto
+  grid-template-rows: 1fr 1fr
+  grid-gap: 35px
+
+.controls
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
+  .buttons
+    display: grid
+    grid-template-columns: 1fr auto
+    grid-gap: 15px
+    .btn
+      background-color: $color3
+      color: $color1
+      font-weight: bold
+      border: 0
+      border-radius: 0
+      box-shadow: none
+      &:hover,
+      &:active
+        background-color: $color2
+        color: $color3
+  .sort
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+  .generate
+    display: flex
+    justify-content: center
+    align-items: flex-end
+
+.content
+  display: flex
+  align-items: flex-end
+  .svg
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+
+.instruction
+  margin-top: 50px
+  text-align: center
+  grid-row: 2 / -1
+  grid-column: 1 / -1
+  display: flex
+  justify-content: center
+  .text
+    max-width: 700px
+    color: $color2
+    h4
+      margin-bottom: 20px
+      font-weight: bold
+    span
+      color: $color3
+      font-weight: bold
+
+@import "media"
+// Always at the end
